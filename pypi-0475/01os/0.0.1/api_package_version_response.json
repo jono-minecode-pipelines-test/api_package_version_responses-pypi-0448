@@ -1,0 +1,113 @@
+{
+    "info": {
+        "author": "Killian",
+        "author_email": "killian@openinterpreter.com",
+        "bugtrack_url": null,
+        "classifiers": [
+            "License :: Other/Proprietary License",
+            "Programming Language :: Python :: 3",
+            "Programming Language :: Python :: 3.10",
+            "Programming Language :: Python :: 3.11",
+            "Programming Language :: Python :: 3.9"
+        ],
+        "description": "# New: The 8th Architecture\n\n```\n/01\n    start.sh # entrypoint, runs server, device, llm\n    server.py # uses tts and stt if it must, exposes \"/\"\n    device.py # also uses tts and stt, hits \"/\"\n    llm.py # starts an openai-compatible server\n    model.llamafile\n    i.py # creates an interpreter which server just imports\n    tts.py\n    stt.py\n    /conversations\n        user.json\n    /skills # files in here will run in the 01's interpreter\n        schedule.py\n        ...\n```\n\nThis is flatter and simpler.\n\n**Device** handles the device \u2014 i.e. everything the user interacts + watching the kernel + running code (which produces `computer` LMC messages) if `DEVICE_EXECUTE_CODE` is true. Runs TTS and STT, sends LMC messages to \"/\".\n\n**Server** serves \"/\", a websocket that accepts `user` LMC messages and sends back `assistant` LMC messages. Runs code (which produces `computer` LMC messages) if `SERVER_EXECUTE_CODE` is true.\n\n**Llm** starts an OpenAI-compatible server with `model.llamafile`. Downloads a heavily quantized Phi-2 if `model.llamafile` doesn't exist.\n\n**I** creates an `interpreter` object. This is where you configure the 01's behavior.\n\n# What is this?\n\nThis is the operating system that powers the 01.\n\n# No, I mean what's this folder?\n\nIt's the `diff` between 01OS and Ubuntu.\n\n01OS should be a customized version of Linux. Ubuntu is popular, stable, runs on lots of different hardware. **(open question: Should this be Xubuntu, which is lighter? or something else?)**\n\nWe want to _build on_ Ubuntu by customizing the stable branch programatically, not by forking it \u2014 which would mean we'd have to maintain the underlying OS, merge in security patches, etc. Yuck.\n\nThis folder contains everything we want to change from the base Ubuntu. A folder here represents a folder added/modified at the `root`. You can think of it like the `diff` between 01OS and Ubuntu.\n\nI imagine we'll use something like Cubic to then press this + Ubuntu into an ISO image.\n\n# Setup & Usage\n\nClone this repo, then run `OS/01/start.sh`.\n\n# Structure\n\n### `start.sh`\n\nThe start script's job is to start the `core` and the `app` (in full-screen mode).\n\n### `/core`\n\nThe `core`'s job is to:\n\n1. Set up the language model\n2. Set up the interpreter\n3. Serve the interpreter at \"/\"\n\n### `/app`\n\nThe `app`'s job is to be the interface between the user and the interpreter (text in). This could be text only, audio, video, who knows, but it becomes LMC messages or plain text.\n\nFor the first version, I think we should just handle audio in/out. So the `app`'s job here is to:\n\n1. Be a fullscreen app for the user to use 01\n2. Turn the user's speech into text and send it to \"/\"\n3. Turn the interpreter's text into speech and play it for the user\n\n### Changes to Linux\n\nWe need to make the following changes:\n\n1. Modify the bootloader to just show white circle on black\n2. Auto start the start script, `start.sh`\n3. Put detectors everywhere, which will put [LMC Messages](https://docs.openinterpreter.com/protocols/lmc-messages) from the computer into `/01/core/queue`. Michael suggested we simply watch and filter the `dmesg` stream (I think that's what it's called?), so I suppose we could have a script like `/01/core/kernel_watcher.py` that puts things into the queue? Honestly knowing we could get it all from one place like that\u2014 maybe this should be simpler. Is the queue necessary? How about we just expect the computer to send computer messages to the websocket at `/`? Then yeah, maybe we do have redis there, then instead of looking at that folder, we check the redis queue...\n4. (open question: should we do this? do we want the first 01 to be ready for GUI control?) Make the display that's shown to the user (and filled with the `app`) the _secondary_ display. The primary display will be a normal Ubuntu desktop, invisible to the user. Why? So the interpreter can control the primary display \"under the hood\".\n",
+        "description_content_type": "text/markdown",
+        "docs_url": null,
+        "download_url": "",
+        "downloads": {
+            "last_day": -1,
+            "last_month": -1,
+            "last_week": -1
+        },
+        "dynamic": null,
+        "home_page": "",
+        "keywords": "",
+        "license": "AGPL",
+        "license_expression": null,
+        "license_files": null,
+        "maintainer": "",
+        "maintainer_email": "",
+        "name": "01OS",
+        "package_url": "https://pypi.org/project/01OS/",
+        "platform": null,
+        "project_url": "https://pypi.org/project/01OS/",
+        "project_urls": null,
+        "provides_extra": null,
+        "release_url": "https://pypi.org/project/01OS/0.0.1/",
+        "requires_dist": [
+            "asyncio (>=3.4.3,<4.0.0)",
+            "pyaudio (>=0.2.14,<0.3.0)",
+            "pynput (>=1.7.6,<2.0.0)",
+            "fastapi (>=0.109.2,<0.110.0)",
+            "uvicorn (>=0.27.1,<0.28.0)",
+            "websockets (>=12.0,<13.0)",
+            "python-dotenv (>=1.0.1,<2.0.0)",
+            "ffmpeg-python (>=0.2.0,<0.3.0)",
+            "textual (>=0.50.1,<0.51.0)",
+            "pydub (>=0.25.1,<0.26.0)",
+            "ngrok (>=1.0.0,<2.0.0)",
+            "open-interpreter (>=0.2.0,<0.3.0)",
+            "simpleaudio (>=1.0.4,<2.0.0)"
+        ],
+        "requires_python": ">=3.9,<3.12",
+        "summary": "The open-source language model computer",
+        "version": "0.0.1",
+        "yanked": false,
+        "yanked_reason": null
+    },
+    "last_serial": 24732978,
+    "ownership": {
+        "organization": null,
+        "roles": [
+            {
+                "role": "Owner",
+                "user": "KillianLucas"
+            }
+        ]
+    },
+    "urls": [
+        {
+            "comment_text": "",
+            "digests": {
+                "blake2b_256": "d9fa2f45313dc8cf688c8af49a588c18d2df7dd7d8d132e9233bc544f30fd454",
+                "md5": "31e6977d8c7b299e9e56506e3aef7099",
+                "sha256": "e4833e26bc5a2a9bbb68bce3890be91420c4cd44162b8e8c25623b58d29ff790"
+            },
+            "downloads": -1,
+            "filename": "01os-0.0.1-py3-none-any.whl",
+            "has_sig": false,
+            "md5_digest": "31e6977d8c7b299e9e56506e3aef7099",
+            "packagetype": "bdist_wheel",
+            "python_version": "py3",
+            "requires_python": ">=3.9,<3.12",
+            "size": 668123,
+            "upload_time": "2024-02-12T09:00:41",
+            "upload_time_iso_8601": "2024-02-12T09:00:41.498161Z",
+            "url": "https://files.pythonhosted.org/packages/d9/fa/2f45313dc8cf688c8af49a588c18d2df7dd7d8d132e9233bc544f30fd454/01os-0.0.1-py3-none-any.whl",
+            "yanked": false,
+            "yanked_reason": null
+        },
+        {
+            "comment_text": "",
+            "digests": {
+                "blake2b_256": "133a51e316c27adcbb78c64c9f36ecedbd0a2736021eaa1f51bca23f774345ec",
+                "md5": "cf138031d96ab48f303cb31dd4f56b0f",
+                "sha256": "39a42f063731a0bc043923e53e6830e7b96183e9a0304bfd5705cb2525dc106a"
+            },
+            "downloads": -1,
+            "filename": "01os-0.0.1.tar.gz",
+            "has_sig": false,
+            "md5_digest": "cf138031d96ab48f303cb31dd4f56b0f",
+            "packagetype": "sdist",
+            "python_version": "source",
+            "requires_python": ">=3.9,<3.12",
+            "size": 662004,
+            "upload_time": "2024-02-12T09:00:44",
+            "upload_time_iso_8601": "2024-02-12T09:00:44.759691Z",
+            "url": "https://files.pythonhosted.org/packages/13/3a/51e316c27adcbb78c64c9f36ecedbd0a2736021eaa1f51bca23f774345ec/01os-0.0.1.tar.gz",
+            "yanked": false,
+            "yanked_reason": null
+        }
+    ],
+    "vulnerabilities": []
+}

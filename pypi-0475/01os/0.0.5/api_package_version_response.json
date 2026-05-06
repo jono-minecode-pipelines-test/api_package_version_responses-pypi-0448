@@ -1,0 +1,114 @@
+{
+    "info": {
+        "author": "Killian",
+        "author_email": "killian@openinterpreter.com",
+        "bugtrack_url": null,
+        "classifiers": [
+            "License :: Other/Proprietary License",
+            "Programming Language :: Python :: 3",
+            "Programming Language :: Python :: 3.10",
+            "Programming Language :: Python :: 3.11",
+            "Programming Language :: Python :: 3.9"
+        ],
+        "description": "The open-source language model computer.\n\n```bash\npip install 01OS\n```\n\n```bash\n01 # This will run a server + attempt to determine and run a client.\n# (Behavior can be modified by changing the contents of `.env`)\n```\n\n**Expose an 01 server publically:**\n\n```bash\n01 --server --expose # This will print a URL that a client can point to.\n```\n\n**Run a specific client:**\n\n```bash\n01 --client macos # Options: macos, rpi\n```\n\n**Run locally:**\n\nThe current default uses OpenAI's services.\n\nThe `--local` flag will install and run the [whisper.cpp](https://github.com/ggerganov/whisper.cpp) STT and [Piper](https://github.com/rhasspy/piper) TTS models.\n\n```bash\n01 --local # Local client and server\n01 --local --server --expose # Expose a local server\n```\n",
+        "description_content_type": "text/markdown",
+        "docs_url": null,
+        "download_url": "",
+        "downloads": {
+            "last_day": -1,
+            "last_month": -1,
+            "last_week": -1
+        },
+        "dynamic": null,
+        "home_page": "",
+        "keywords": "",
+        "license": "AGPL",
+        "license_expression": null,
+        "license_files": null,
+        "maintainer": "",
+        "maintainer_email": "",
+        "name": "01OS",
+        "package_url": "https://pypi.org/project/01OS/",
+        "platform": null,
+        "project_url": "https://pypi.org/project/01OS/",
+        "project_urls": null,
+        "provides_extra": null,
+        "release_url": "https://pypi.org/project/01OS/0.0.5/",
+        "requires_dist": [
+            "asyncio (>=3.4.3,<4.0.0)",
+            "pyaudio (>=0.2.14,<0.3.0)",
+            "pynput (>=1.7.6,<2.0.0)",
+            "fastapi (>=0.109.2,<0.110.0)",
+            "uvicorn (>=0.27.1,<0.28.0)",
+            "websockets (>=12.0,<13.0)",
+            "python-dotenv (>=1.0.1,<2.0.0)",
+            "ffmpeg-python (>=0.2.0,<0.3.0)",
+            "textual (>=0.50.1,<0.51.0)",
+            "pydub (>=0.25.1,<0.26.0)",
+            "ngrok (>=1.0.0,<2.0.0)",
+            "simpleaudio (>=1.0.4,<2.0.0)",
+            "opencv-python (>=4.9.0.80,<5.0.0.0)",
+            "open-interpreter[os] (==0.2.1-pre-r)"
+        ],
+        "requires_python": ">=3.9,<3.12",
+        "summary": "The open-source language model computer",
+        "version": "0.0.5",
+        "yanked": false,
+        "yanked_reason": null
+    },
+    "last_serial": 24732978,
+    "ownership": {
+        "organization": null,
+        "roles": [
+            {
+                "role": "Owner",
+                "user": "KillianLucas"
+            }
+        ]
+    },
+    "urls": [
+        {
+            "comment_text": "",
+            "digests": {
+                "blake2b_256": "df96f525c0ac8f87ab9fc65d3fb94e5ae9c554d36e899f923e965f38a5aae5a8",
+                "md5": "3df3fdc13178398cdf94f868171cc7c5",
+                "sha256": "e08ea2f187baf29aa3e8fb85e0fa982d258068f1b642d64a3dbf18c82ff2e99b"
+            },
+            "downloads": -1,
+            "filename": "01os-0.0.5-py3-none-any.whl",
+            "has_sig": false,
+            "md5_digest": "3df3fdc13178398cdf94f868171cc7c5",
+            "packagetype": "bdist_wheel",
+            "python_version": "py3",
+            "requires_python": ">=3.9,<3.12",
+            "size": 49935,
+            "upload_time": "2024-02-19T11:20:15",
+            "upload_time_iso_8601": "2024-02-19T11:20:15.644942Z",
+            "url": "https://files.pythonhosted.org/packages/df/96/f525c0ac8f87ab9fc65d3fb94e5ae9c554d36e899f923e965f38a5aae5a8/01os-0.0.5-py3-none-any.whl",
+            "yanked": false,
+            "yanked_reason": null
+        },
+        {
+            "comment_text": "",
+            "digests": {
+                "blake2b_256": "9d7edd5a86e1973c6845893e7bd270d81008c9e6c8edbf3439ae7ec6a3aa4a03",
+                "md5": "b25958b17c3a829823d48bf73abf0cd8",
+                "sha256": "64ad1cb5b445945c3bac75cf9cd8407c87d327cc62ca7bd87ffe6c459905377b"
+            },
+            "downloads": -1,
+            "filename": "01os-0.0.5.tar.gz",
+            "has_sig": false,
+            "md5_digest": "b25958b17c3a829823d48bf73abf0cd8",
+            "packagetype": "sdist",
+            "python_version": "source",
+            "requires_python": ">=3.9,<3.12",
+            "size": 42772,
+            "upload_time": "2024-02-19T11:20:17",
+            "upload_time_iso_8601": "2024-02-19T11:20:17.201170Z",
+            "url": "https://files.pythonhosted.org/packages/9d/7e/dd5a86e1973c6845893e7bd270d81008c9e6c8edbf3439ae7ec6a3aa4a03/01os-0.0.5.tar.gz",
+            "yanked": false,
+            "yanked_reason": null
+        }
+    ],
+    "vulnerabilities": []
+}

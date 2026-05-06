@@ -1,0 +1,118 @@
+{
+    "info": {
+        "author": "Killian",
+        "author_email": "killian@openinterpreter.com",
+        "bugtrack_url": null,
+        "classifiers": [
+            "License :: Other/Proprietary License",
+            "Programming Language :: Python :: 3",
+            "Programming Language :: Python :: 3.10",
+            "Programming Language :: Python :: 3.11",
+            "Programming Language :: Python :: 3.9"
+        ],
+        "description": "The open-source language model computer.\n\n```bash\npip install 01OS\n```\n\n```bash\n01 # Runs the 01 server and client\n```\n",
+        "description_content_type": "text/markdown",
+        "docs_url": null,
+        "download_url": "",
+        "downloads": {
+            "last_day": -1,
+            "last_month": -1,
+            "last_week": -1
+        },
+        "dynamic": null,
+        "home_page": "",
+        "keywords": "",
+        "license": "AGPL",
+        "license_expression": null,
+        "license_files": null,
+        "maintainer": "",
+        "maintainer_email": "",
+        "name": "01OS",
+        "package_url": "https://pypi.org/project/01OS/",
+        "platform": null,
+        "project_url": "https://pypi.org/project/01OS/",
+        "project_urls": null,
+        "provides_extra": null,
+        "release_url": "https://pypi.org/project/01OS/0.0.13/",
+        "requires_dist": [
+            "asyncio (>=3.4.3,<4.0.0)",
+            "pyaudio (>=0.2.14,<0.3.0)",
+            "pynput (>=1.7.6,<2.0.0)",
+            "fastapi (>=0.110.0,<0.111.0)",
+            "uvicorn (>=0.27.1,<0.28.0)",
+            "websockets (>=12.0,<13.0)",
+            "python-dotenv (>=1.0.1,<2.0.0)",
+            "ffmpeg-python (>=0.2.0,<0.3.0)",
+            "textual (>=0.50.1,<0.51.0)",
+            "pydub (>=0.25.1,<0.26.0)",
+            "ngrok (>=1.0.0,<2.0.0)",
+            "simpleaudio (>=1.0.4,<2.0.0)",
+            "opencv-python (>=4.9.0.80,<5.0.0.0)",
+            "open-interpreter[os] (==0.2.1rc2)",
+            "psutil (>=5.9.8,<6.0.0)",
+            "typer (>=0.9.0,<0.10.0)",
+            "platformdirs (>=4.2.0,<5.0.0)",
+            "rich (>=13.7.1,<14.0.0)"
+        ],
+        "requires_python": ">=3.9,<3.12",
+        "summary": "The open-source language model computer",
+        "version": "0.0.13",
+        "yanked": false,
+        "yanked_reason": null
+    },
+    "last_serial": 24732978,
+    "ownership": {
+        "organization": null,
+        "roles": [
+            {
+                "role": "Owner",
+                "user": "KillianLucas"
+            }
+        ]
+    },
+    "urls": [
+        {
+            "comment_text": "",
+            "digests": {
+                "blake2b_256": "d9a8196a80844f2e09ea7a2912e639fa78835d963a12e709a6eed9ca8daed181",
+                "md5": "de45a9fe3ecbfca02d87468aee4fbfc8",
+                "sha256": "c25a4f619d89a7499ae95199315aeb1fccec1f791d65e4244010a9e90b494fbb"
+            },
+            "downloads": -1,
+            "filename": "01os-0.0.13-py3-none-any.whl",
+            "has_sig": false,
+            "md5_digest": "de45a9fe3ecbfca02d87468aee4fbfc8",
+            "packagetype": "bdist_wheel",
+            "python_version": "py3",
+            "requires_python": ">=3.9,<3.12",
+            "size": 60723,
+            "upload_time": "2024-03-08T05:19:43",
+            "upload_time_iso_8601": "2024-03-08T05:19:43.471483Z",
+            "url": "https://files.pythonhosted.org/packages/d9/a8/196a80844f2e09ea7a2912e639fa78835d963a12e709a6eed9ca8daed181/01os-0.0.13-py3-none-any.whl",
+            "yanked": false,
+            "yanked_reason": null
+        },
+        {
+            "comment_text": "",
+            "digests": {
+                "blake2b_256": "0ccad5c1dc14bd0c8d8db03afdc7de9106b678c0d3ba3848154f17b7ebc0be98",
+                "md5": "e28986670cfdd9042a4b7a07c5a8d638",
+                "sha256": "3d1f5a90ae74e629bb64f65f18e6138dc6ebb4c21d67516f5f4b23fa52d557eb"
+            },
+            "downloads": -1,
+            "filename": "01os-0.0.13.tar.gz",
+            "has_sig": false,
+            "md5_digest": "e28986670cfdd9042a4b7a07c5a8d638",
+            "packagetype": "sdist",
+            "python_version": "source",
+            "requires_python": ">=3.9,<3.12",
+            "size": 48041,
+            "upload_time": "2024-03-08T05:19:45",
+            "upload_time_iso_8601": "2024-03-08T05:19:45.518687Z",
+            "url": "https://files.pythonhosted.org/packages/0c/ca/d5c1dc14bd0c8d8db03afdc7de9106b678c0d3ba3848154f17b7ebc0be98/01os-0.0.13.tar.gz",
+            "yanked": false,
+            "yanked_reason": null
+        }
+    ],
+    "vulnerabilities": []
+}

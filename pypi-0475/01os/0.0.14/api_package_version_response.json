@@ -1,0 +1,112 @@
+{
+    "info": {
+        "author": "Killian",
+        "author_email": "killian@openinterpreter.com",
+        "bugtrack_url": null,
+        "classifiers": [
+            "License :: Other/Proprietary License",
+            "Programming Language :: Python :: 3",
+            "Programming Language :: Python :: 3.10",
+            "Programming Language :: Python :: 3.11"
+        ],
+        "description": "We no longer support installation from `pip`, and instead recommend cloning the repository locally.\n\nVisit [our GitHub repository](https://github.com/OpenInterpreter/01/) for more information.\n\n*The 01 is an open-source voice interface for desktop, mobile, and ESP32 chips.*",
+        "description_content_type": "text/markdown",
+        "docs_url": null,
+        "download_url": null,
+        "downloads": {
+            "last_day": -1,
+            "last_month": -1,
+            "last_week": -1
+        },
+        "dynamic": null,
+        "home_page": null,
+        "keywords": null,
+        "license": "AGPL",
+        "license_expression": null,
+        "license_files": null,
+        "maintainer": null,
+        "maintainer_email": null,
+        "name": "01OS",
+        "package_url": "https://pypi.org/project/01OS/",
+        "platform": null,
+        "project_url": "https://pypi.org/project/01OS/",
+        "project_urls": null,
+        "provides_extra": null,
+        "release_url": "https://pypi.org/project/01OS/0.0.14/",
+        "requires_dist": [
+            "livekit<0.13.0,>=0.12.1",
+            "livekit-agents<0.9.0,>=0.8.6",
+            "livekit-plugins-deepgram<0.7.0,>=0.6.5",
+            "livekit-plugins-openai<0.9.0,>=0.8.1",
+            "livekit-plugins-silero<0.7.0,>=0.6.4",
+            "livekit-plugins-elevenlabs<0.8.0,>=0.7.3",
+            "segno<2.0.0,>=1.6.1",
+            "open-interpreter[os,server]<0.4.0,>=0.3.8",
+            "ngrok<2.0.0,>=1.4.0",
+            "realtimetts[all]<0.5.0,>=0.4.5",
+            "realtimestt<0.3.0,>=0.2.41",
+            "pynput<2.0.0,>=1.7.7",
+            "yaspin<4.0.0,>=3.0.2"
+        ],
+        "requires_python": "<3.12,>=3.10",
+        "summary": "The #1 open-source voice interface for desktop, mobile, and ESP32 chips.",
+        "version": "0.0.14",
+        "yanked": false,
+        "yanked_reason": null
+    },
+    "last_serial": 24732978,
+    "ownership": {
+        "organization": null,
+        "roles": [
+            {
+                "role": "Owner",
+                "user": "KillianLucas"
+            }
+        ]
+    },
+    "urls": [
+        {
+            "comment_text": "",
+            "digests": {
+                "blake2b_256": "220df2650419b8079bbef93046a8d54155a0854e27f5fe5d7041cba0e264b826",
+                "md5": "3d70777a0f69d0a1184cdf120b921e14",
+                "sha256": "7e94f12aa707dd86231919a3433a312a238347f1f52e5b83b17180f10b0679de"
+            },
+            "downloads": -1,
+            "filename": "01os-0.0.14-py3-none-any.whl",
+            "has_sig": false,
+            "md5_digest": "3d70777a0f69d0a1184cdf120b921e14",
+            "packagetype": "bdist_wheel",
+            "python_version": "py3",
+            "requires_python": "<3.12,>=3.10",
+            "size": 420379,
+            "upload_time": "2024-08-26T01:10:45",
+            "upload_time_iso_8601": "2024-08-26T01:10:45.359123Z",
+            "url": "https://files.pythonhosted.org/packages/22/0d/f2650419b8079bbef93046a8d54155a0854e27f5fe5d7041cba0e264b826/01os-0.0.14-py3-none-any.whl",
+            "yanked": false,
+            "yanked_reason": null
+        },
+        {
+            "comment_text": "",
+            "digests": {
+                "blake2b_256": "597c36b70af9d7e6083d14819720b2985f54def3827b0c83e2b96fb221f709b4",
+                "md5": "a5048a513145650073f7b38a8e4a2288",
+                "sha256": "988150618d0469793e6f340c488a904e1af7f5fde09c2d33acb003d3401ecc0e"
+            },
+            "downloads": -1,
+            "filename": "01os-0.0.14.tar.gz",
+            "has_sig": false,
+            "md5_digest": "a5048a513145650073f7b38a8e4a2288",
+            "packagetype": "sdist",
+            "python_version": "source",
+            "requires_python": "<3.12,>=3.10",
+            "size": 406355,
+            "upload_time": "2024-08-26T01:10:47",
+            "upload_time_iso_8601": "2024-08-26T01:10:47.799928Z",
+            "url": "https://files.pythonhosted.org/packages/59/7c/36b70af9d7e6083d14819720b2985f54def3827b0c83e2b96fb221f709b4/01os-0.0.14.tar.gz",
+            "yanked": false,
+            "yanked_reason": null
+        }
+    ],
+    "vulnerabilities": []
+}
