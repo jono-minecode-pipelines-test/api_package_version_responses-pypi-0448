@@ -1,0 +1,107 @@
+{
+    "info": {
+        "author": "Skeetzo",
+        "author_email": "WebmasterSkeetzo@gmail.com",
+        "bugtrack_url": null,
+        "classifiers": [
+            "Development Status :: 5 - Production/Stable",
+            "Environment :: Console",
+            "Intended Audience :: Developers",
+            "License :: OSI Approved :: MIT License",
+            "Natural Language :: English",
+            "Operating System :: POSIX :: Linux",
+            "Programming Language :: Python :: 3",
+            "Topic :: Office/Business :: Financial :: Investment",
+            "Topic :: Software Development :: Libraries :: Python Modules"
+        ],
+        "description": "# 0x Python Wrapper\n\n\n### API docs\nCan be found here: https://0x.org/docs/api\n\n### DEV environment\n\nInstall test dependencies: `python3 setup.py install -e [.dev]`\nRun some tests: `python3 -m unittest tests.test_0x`\nRun all tests: `python3 -m unittest discover -s ./tests`\n\n",
+        "description_content_type": "text/markdown",
+        "docs_url": null,
+        "download_url": "",
+        "downloads": {
+            "last_day": -1,
+            "last_month": -1,
+            "last_week": -1
+        },
+        "dynamic": null,
+        "home_page": "https://github.com/skeetzo/0x-python",
+        "keywords": "0x,api,python",
+        "license": "",
+        "license_expression": null,
+        "license_files": null,
+        "maintainer": "",
+        "maintainer_email": "",
+        "name": "0x-python",
+        "package_url": "https://pypi.org/project/0x-python/",
+        "platform": "",
+        "project_url": "https://pypi.org/project/0x-python/",
+        "project_urls": {
+            "Homepage": "https://github.com/skeetzo/0x-python"
+        },
+        "provides_extra": null,
+        "release_url": "https://pypi.org/project/0x-python/1.0.13/",
+        "requires_dist": [
+            "requests"
+        ],
+        "requires_python": "",
+        "summary": "0x python wrapper",
+        "version": "1.0.13",
+        "yanked": false,
+        "yanked_reason": null
+    },
+    "last_serial": 11524790,
+    "ownership": {
+        "organization": null,
+        "roles": [
+            {
+                "role": "Owner",
+                "user": "Skeetzo"
+            }
+        ]
+    },
+    "urls": [
+        {
+            "comment_text": "",
+            "digests": {
+                "blake2b_256": "23f361e09aa21602db753e19ecab4c6fd3e88485f01481599cf90a99a72bcce1",
+                "md5": "4a25c83e31abf1d1dfcce03d434458cc",
+                "sha256": "11f3e20245c4f32b269bf5673e1757dcd5a450cfbb5e31b0fa7ee7420a4fb3db"
+            },
+            "downloads": -1,
+            "filename": "0x_python-1.0.13-py3-none-any.whl",
+            "has_sig": false,
+            "md5_digest": "4a25c83e31abf1d1dfcce03d434458cc",
+            "packagetype": "bdist_wheel",
+            "python_version": "py3",
+            "requires_python": null,
+            "size": 3633,
+            "upload_time": "2021-09-22T21:34:43",
+            "upload_time_iso_8601": "2021-09-22T21:34:43.168249Z",
+            "url": "https://files.pythonhosted.org/packages/23/f3/61e09aa21602db753e19ecab4c6fd3e88485f01481599cf90a99a72bcce1/0x_python-1.0.13-py3-none-any.whl",
+            "yanked": false,
+            "yanked_reason": null
+        },
+        {
+            "comment_text": "",
+            "digests": {
+                "blake2b_256": "85bbcaaf23126a355425958e8c5e6ecbeeb5e9c0c3fe1e13c3153233ddabc9b0",
+                "md5": "14c702f778db0ecb1edde56b155b664f",
+                "sha256": "058753cc36ded523e40baf46c4374cdc44acd8bcab98afa815512f8df7dc22a3"
+            },
+            "downloads": -1,
+            "filename": "0x-python-1.0.13.tar.gz",
+            "has_sig": false,
+            "md5_digest": "14c702f778db0ecb1edde56b155b664f",
+            "packagetype": "sdist",
+            "python_version": "source",
+            "requires_python": null,
+            "size": 3867,
+            "upload_time": "2021-09-22T21:34:44",
+            "upload_time_iso_8601": "2021-09-22T21:34:44.288487Z",
+            "url": "https://files.pythonhosted.org/packages/85/bb/caaf23126a355425958e8c5e6ecbeeb5e9c0c3fe1e13c3153233ddabc9b0/0x-python-1.0.13.tar.gz",
+            "yanked": false,
+            "yanked_reason": null
+        }
+    ],
+    "vulnerabilities": []
+}

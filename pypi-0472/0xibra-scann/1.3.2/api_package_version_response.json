@@ -1,0 +1,90 @@
+{
+    "info": {
+        "author": "Google Inc.",
+        "author_email": "opensource@google.com",
+        "bugtrack_url": null,
+        "classifiers": [
+            "Intended Audience :: Developers",
+            "Intended Audience :: Education",
+            "Intended Audience :: Science/Research",
+            "License :: OSI Approved :: Apache Software License",
+            "Programming Language :: Python :: 3",
+            "Programming Language :: Python :: 3.10",
+            "Programming Language :: Python :: 3.11",
+            "Programming Language :: Python :: 3.12",
+            "Programming Language :: Python :: 3.9",
+            "Topic :: Scientific/Engineering :: Mathematics",
+            "Topic :: Software Development :: Libraries",
+            "Topic :: Software Development :: Libraries :: Python Modules"
+        ],
+        "description": "\r\n# ScaNN\r\n\r\nScaNN (Scalable Nearest Neighbors) is a method for efficient vector similarity\r\nsearch at scale. This code release implements [1], which includes search space\r\npruning and quantization for Maximum Inner Product Search and also supports\r\nother distance functions such as Euclidean distance. The implementation is\r\ndesigned for x86 processors with AVX2 support. ScaNN achieves state-of-the-art\r\nperformance on [ann-benchmarks.com](http://ann-benchmarks.com) as shown on the\r\nglove-100-angular dataset below:\r\n\r\n![glove-100-angular](https://github.com/google-research/google-research/raw/master/scann/docs/glove_bench.png)\r\n\r\nScaNN can be configured to fit datasets with different sizes and distributions.\r\nIt has both TensorFlow and Python APIs. The library shows strong performance\r\nwith large datasets [1]. The code is released for research purposes. For more\r\ndetails on the academic description of algorithms, please see [1].\r\n\r\nReference [1]:\r\n```\r\n@inproceedings{avq_2020,\r\n  title={Accelerating Large-Scale Inference with Anisotropic Vector Quantization},\r\n  author={Guo, Ruiqi and Sun, Philip and Lindgren, Erik and Geng, Quan and Simcha, David and Chern, Felix and Kumar, Sanjiv},\r\n  booktitle={International Conference on Machine Learning},\r\n  year={2020},\r\n  URL={https://arxiv.org/abs/1908.10396}\r\n}\r\n```\r\n## Installation\r\n\r\n`manylinux_2_27`-compatible wheels are available on PyPI:\r\n\r\n```\r\npip install scann\r\n```\r\n\r\nScaNN supports Linux environments running Python versions 3.9-3.12. See\r\n[docs/releases.md](https://github.com/google-research/google-research/blob/master/scann/docs/releases.md) for release notes; the page also contains\r\ndownload links for ScaNN wheels prior to version 1.1.0, which were not released\r\non PyPI.\r\n\r\nIn accordance with the\r\n[`manylinux_2_27` specification](https://peps.python.org/pep-0600/), ScaNN\r\nrequires `libstdc++` version 3.4.23 or above from the operating system. See\r\n[here](https://stackoverflow.com/questions/10354636) for an example of how\r\nto find your system's `libstdc++` version; it can generally be upgraded by\r\ninstalling a newer version of `g++`.\r\n\r\n### Integration with TensorFlow Serving\r\n\r\nWe provide custom Docker images of\r\n[TF Serving](https://github.com/tensorflow/serving) that are linked to the ScaNN\r\nTF ops. See the [`tf_serving` directory](tf_serving/README.md) for further\r\ninformation.\r\n\r\n## Building from source\r\n\r\nTo build ScaNN from source, first install the build tool\r\n[bazel](https://bazel.build), Clang 16, and libstdc++ headers for C++17 (which\r\nare provided with GCC 9). Additionally, ScaNN requires a modern version of\r\nPython (3.9.x or later) and Tensorflow 2.16 installed on that version of Python.\r\nOnce these prerequisites are satisfied, run the following command in the root\r\ndirectory of the repository:\r\n\r\n```\r\npython configure.py\r\nCC=clang-16 bazel build -c opt --features=thin_lto --copt=-mavx --copt=-mfma --cxxopt=\"-std=c++17\" --copt=-fsized-deallocation --copt=-w :build_pip_pkg\r\n./bazel-bin/build_pip_pkg\r\n```\r\n\r\nA .whl file should appear in the root of the repository upon successful\r\ncompletion of these commands. This .whl can be installed via pip.\r\n\r\n## Usage\r\n\r\nSee the example in [docs/example.ipynb](https://github.com/google-research/google-research/blob/master/scann/docs/example.ipynb). For a more in-depth\r\nexplanation of ScaNN techniques, see [docs/algorithms.md](https://github.com/google-research/google-research/blob/master/scann/docs/algorithms.md).\r\n",
+        "description_content_type": "text/markdown",
+        "docs_url": null,
+        "download_url": null,
+        "downloads": {
+            "last_day": -1,
+            "last_month": -1,
+            "last_week": -1
+        },
+        "dynamic": null,
+        "home_page": "https://github.com/google-research/google-research/tree/master/scann",
+        "keywords": "machine learning",
+        "license": "Apache 2.0",
+        "license_expression": null,
+        "license_files": null,
+        "maintainer": null,
+        "maintainer_email": null,
+        "name": "0xibra-scann",
+        "package_url": "https://pypi.org/project/0xibra-scann/",
+        "platform": null,
+        "project_url": "https://pypi.org/project/0xibra-scann/",
+        "project_urls": {
+            "Homepage": "https://github.com/google-research/google-research/tree/master/scann"
+        },
+        "provides_extra": null,
+        "release_url": "https://pypi.org/project/0xibra-scann/1.3.2/",
+        "requires_dist": [
+            "tensorflow~=2.16.0",
+            "numpy"
+        ],
+        "requires_python": null,
+        "summary": "Scalable Nearest Neighbor search library",
+        "version": "1.3.2",
+        "yanked": false,
+        "yanked_reason": null
+    },
+    "last_serial": 23967570,
+    "ownership": {
+        "organization": null,
+        "roles": [
+            {
+                "role": "Owner",
+                "user": "ibragim"
+            }
+        ]
+    },
+    "urls": [
+        {
+            "comment_text": "",
+            "digests": {
+                "blake2b_256": "f41cb9eaf7c2b3c02dcab9b5f3c41dbb278e927c66318c5519e84084a5a716d7",
+                "md5": "7d8d5b07697a7056954676df75f82a04",
+                "sha256": "ac5b380e7010108156feaebd8fe6633d268d5688cf5e022c4c33343c605e432d"
+            },
+            "downloads": -1,
+            "filename": "0xibra_scann-1.3.2-cp310-cp310-win_amd64.whl",
+            "has_sig": false,
+            "md5_digest": "7d8d5b07697a7056954676df75f82a04",
+            "packagetype": "bdist_wheel",
+            "python_version": "cp310",
+            "requires_python": null,
+            "size": 2979,
+            "upload_time": "2024-07-03T12:38:02",
+            "upload_time_iso_8601": "2024-07-03T12:38:02.554868Z",
+            "url": "https://files.pythonhosted.org/packages/f4/1c/b9eaf7c2b3c02dcab9b5f3c41dbb278e927c66318c5519e84084a5a716d7/0xibra_scann-1.3.2-cp310-cp310-win_amd64.whl",
+            "yanked": false,
+            "yanked_reason": null
+        }
+    ],
+    "vulnerabilities": []
+}
